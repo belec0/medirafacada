@@ -91,14 +91,18 @@ class DataSource
      * @param array $paramArray
      * @return int
      */
-    public function insert($query, $paramType, $paramArray)
+    public function insert($query)
     {
-        print $query;
-        $stmt = $this->conn->prepare($query);
-        $this->bindQueryParams($stmt, $paramType, $paramArray);
-        $stmt->execute();
-        $insertId = $stmt->insert_id;
-        return $insertId;
+        // Create connection
+        $conn = $this->getConnection();
+        
+
+        if ($conn->query($query) === TRUE) {
+            return "New record created successfully";
+        } else {
+            return "Error: " . $query . "<br>" . $conn->error;
+        }
+
     }
     
     /**

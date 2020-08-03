@@ -37,4 +37,25 @@ class Member
             return true;
         }
     }
+
+    public function cadastraUsuario($dados){
+        // user_name
+        // display_name
+        // password
+        // email
+        $query = "INSERT INTO registered_users(
+            user_name,  
+            display_name,  
+            password, 
+            email
+            ) VALUES (
+            '".$dados['user_name']."',
+            '".$dados['user_name']."',
+            md5('".$dados['password']."'),
+            '".$dados['user_email']."'
+            )";
+        $memberResult = $this->ds->insert($query);
+        
+        return $memberResult;
+    }
 }
