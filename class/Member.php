@@ -32,6 +32,7 @@ class Member
         $paramType = "ss";
         $paramArray = array($username, $passwordHash);
         $memberResult = $this->ds->select($query, $paramType, $paramArray);
+        // var_dump($memberResult);exit;
         if(!empty($memberResult)) {
             $_SESSION["userId"] = $memberResult[0]["id"];
             return true;

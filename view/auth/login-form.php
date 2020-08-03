@@ -1,9 +1,13 @@
-<?php require_once("../layout/topTheme.php"); ?>
+<?php require_once("../layout/topTheme.php");
+session_start();
 
+if (! empty($_SESSION['id'])) {
+    header("Location: ../dashboard.php");
+}
+?>
     <div >
         <form action="login-action.php" method="post" id="frmLogin" onSubmit="return validate();" >
             <div class="demo-table bg-light">
-
                 <div class="form-head">Login</div>
                 <?php 
                 if(isset($_SESSION["errorMessage"])) {
@@ -31,6 +35,13 @@
                 </div>
                 <div class=field-column>
                     <div>
+                        <?php 
+                        if(isset($_GET['log'])){
+                            echo "<h6 class='text-danger'>Login invalido!</h6>";
+                        }
+                        ?>
+                    </div>
+                    <div>
                         <input type="submit" name="login" value="Login" class="form-control btn btn-primary"></span>
                     </div>
                 </div>
@@ -41,6 +52,10 @@
         </form>
     </div>
     <script>
+
+    $(document).ready(function() {
+        console.log( "ready!" );
+    });
     function validate() {
         var $valid = true;
         document.getElementById("user_info").innerHTML = "";
