@@ -10,13 +10,11 @@ if (! empty($_POST["login"])) {
     
     $member = new Member();
     $isLoggedIn = $member->processLogin($username, $password);
-    $_SESSION = $member->getMemberById(1)[0];
-    
     if($isLoggedIn){
         header("Location: ../dashboard.php");
     }else{
-        $_SESSION["errorMessage"] = "Invalid Credentials";
-        header("Location: ../auth/login-form.php?log=0");
+        $_SESSION["errorMessage"] = "Login invalido";
+        header("Location: ../auth/login-form.php");
     }
     exit();
 }

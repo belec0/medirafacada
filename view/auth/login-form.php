@@ -36,8 +36,8 @@ if (! empty($_SESSION['id'])) {
                 <div class=field-column>
                     <div>
                         <?php 
-                        if(isset($_GET['log'])){
-                            echo "<h6 class='text-danger'>Login invalido!</h6>";
+                        if(isset($_GET['log']) && $_GET['log'] == 1){
+                            echo "<h6 class='text-success'>Usuário criado!</h6>";
                         }
                         ?>
                     </div>

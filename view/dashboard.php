@@ -9,9 +9,8 @@ if (! empty($_SESSION["user_name"])) {
     // $memberResult = $member->getMemberById($_SESSION["userId"]);
     //     $displayName = $memberResult[0]["user_name"];
 }else{
-    print_r($_SESSION);
-    echo "deu ruim <a href='auth/logout.php' class='logout-button'>Logout</a>";
-    exit;
+    // $_SESSION["errorMessage"] = "Invalid Credentials";
+    header("Location: auth/login-form.php");
 }
 ?>
         <div class="dashboard">
