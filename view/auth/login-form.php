@@ -1,4 +1,5 @@
-<?php require_once("../layout/topTheme.php");
+<?php 
+require_once("medirafacada/view/layout/topTheme.php");
 session_start();
 
 if (! empty($_SESSION['id'])) {
