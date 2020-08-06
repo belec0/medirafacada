@@ -7,6 +7,5 @@ if (! empty($_SESSION["user_name"])) {
 }else{
     header("Location: auth/login-form.php");
 }
-print_r($_SESSION['user_name']);
 ?>
 <?php require_once("../layout/bottomTheme.php"); 

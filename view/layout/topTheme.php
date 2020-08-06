@@ -1,6 +1,5 @@
 <html>
 <?php  
-if (empty($_SESSION["userId"])) {   
     ?>
     <head>
         <title>User Login</title>
@@ -14,11 +13,12 @@ if (empty($_SESSION["userId"])) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body >
+        <?php session_start(); ?>
     
         <div id="wrapper">
         
 
-        <!-- Sidebar -->
+        <?php if (isset($_SESSION["id"])) { ?>
         <div id="sidebar-wrapper">
         
             <ul class="sidebar-nav">
@@ -35,30 +35,28 @@ if (empty($_SESSION["userId"])) {
                 </li>
             </ul>
         </div>
+
         <nav style="background-color: black;" class="navbar navbar-expand-md  navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Meus dados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
-            </li>    
-            </ul>
-        </div>  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Meus dados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../view/auth/logout.php">Logout</a>
+                </li>    
+                </ul>
+            </div>  
         </nav>
-        <br>
+        <?php } ?>
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-    <?php
     
-}else{
-?>
     <head>
         <title>User Login</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -70,7 +68,3 @@ if (empty($_SESSION["userId"])) {
     </head>
     <body class="bg-dark">
     <div class="content">
-<?php
-}
-
-?>

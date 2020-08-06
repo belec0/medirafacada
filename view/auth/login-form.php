@@ -1,6 +1,6 @@
 <?php 
-require_once("medirafacada/view/layout/topTheme.php");
-session_start();
+
+require_once("../layout/topTheme.php");
 
 if (! empty($_SESSION['id'])) {
     header("Location: ../dashboard.php");
@@ -12,10 +12,10 @@ if (! empty($_SESSION['id'])) {
                 <div class="form-head">Login</div>
                 <?php 
                 if(isset($_SESSION["errorMessage"])) {
-                ?>
-                <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
-                <?php 
-                unset($_SESSION["errorMessage"]);
+                    ?>
+                    <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
+                    <?php 
+                    unset($_SESSION["errorMessage"]);
                 } 
                 ?>
                 <div class="field-column">

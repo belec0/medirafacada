@@ -1,7 +1,6 @@
 <?php require_once("layout/topTheme.php"); ?>
 <?php
 require_once("layout/topTheme.php");
-session_start();
 use \Phppot\Member;
 
 if (! empty($_SESSION["user_name"])) {
@@ -9,6 +8,8 @@ if (! empty($_SESSION["user_name"])) {
 }else{
     header("Location: auth/login-form.php");
 }
+
+print_r($_SESSION['id']);
 ?>
 
 
