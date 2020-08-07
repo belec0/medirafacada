@@ -1,5 +1,5 @@
 
---Antes de tudo, crie um banco de dados em branco com o nome "computador"
+-- Antes de tudo, crie um banco de dados em branco com o nome "computador"
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
