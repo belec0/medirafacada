@@ -28,10 +28,10 @@
                     </h3>
                 </li>
                 <li>
-                    <a href="dashboard.php">Dashboard</a>
+                    <a href="/medirafacada/view/dashboard.php">Dashboard</a>
                 </li>
                 <li>
-                    <a href="meusItens/meusItensLista.php">Meus itens</a>
+                    <a href="/medirafacada/view/meusItens/meusItensLista.php">Meus itens</a>
                 </li>
             </ul>
         </div>
@@ -46,12 +46,13 @@
                     <a class="nav-link" href="#">Meus dados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../view/auth/logout.php">Logout</a>
+                    <a class="nav-link" href="/medirafacada/view/auth/logout.php">Logout</a>
                 </li>    
                 </ul>
             </div>  
         </nav>
-        <?php } ?>
+        <?php }
+        ?>
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
