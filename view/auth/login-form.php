@@ -20,7 +20,7 @@ if (! empty($_SESSION['id'])) {
                 ?>
                 <div class="field-column">
                     <div>
-                        <label for="username">Usiário</label><span id="user_info" class="error-info"></span>
+                        <label for="username">Usuário</label><span id="user_info" class="error-info"></span>
                     </div>
                     <div>
                         <input name="user_name" id="user_name" type="text" class="form-control">
