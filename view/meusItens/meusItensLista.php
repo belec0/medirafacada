@@ -1,6 +1,4 @@
 <?php require_once("../layout/topTheme.php"); 
-session_start();
-use \Phppot\Member;
 
 if (! empty($_SESSION["user_name"])) {
     require_once("../../class/Member.php"); 
