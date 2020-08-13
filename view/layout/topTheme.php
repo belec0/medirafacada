@@ -31,7 +31,7 @@
                     <a href="/medirafacada/view/dashboard.php">Dashboard</a>
                 </li>
                 <li>
-                    <a href="/medirafacada/view/meusItens/meusItensLista.php">Meus itens</a>
+                    <a href="/medirafacada/view/meusItens/lista.php">Meus itens</a>
                 </li>
             </ul>
         </div>
