@@ -54,7 +54,7 @@
                 </ul>
             </div>  
         </nav>
-        <?php }
+        <?php }else{
         ?>
         <div id="page-content-wrapper">
             <div class="container-fluid">
@@ -72,3 +72,4 @@
     </head>
     <body class="bg-dark">
     <div class="content">
+        <?php } ?>
