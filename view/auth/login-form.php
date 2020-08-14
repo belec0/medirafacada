@@ -29,6 +29,7 @@ if (! empty($_SESSION['id'])) {
                 <div class="field-column">
                     <div>
                         <label for="password">Senha</label><span id="password_info" class="error-info"></span>
+                        <p id="testee">Cor</p>
                     </div>
                     <div>
                         <input name="password" id="password" type="password" class="form-control">
