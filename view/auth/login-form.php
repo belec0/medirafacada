@@ -20,18 +20,18 @@ if (! empty($_SESSION['id'])) {
                 ?>
                 <div class="field-column">
                     <div>
-                        <label for="username">Usuário</label><span id="user_info" class="error-info"></span>
+                        <label for="username" class="nomes-login">Usuário</label><span id="user_info" class="error-info erros-login"></span>
                     </div>
                     <div>
-                        <input name="user_name" id="user_name" type="text" class="form-control">
+                        <input name="user_name" id="user_name" type="text" class="form-control campos-login">
                     </div>
                 </div>
                 <div class="field-column">
                     <div>
-                        <label for="password">Senha</label><span id="password_info" class="error-info"></span>
+                        <label for="password" class="nomes-login">Senha</label><span id="password_info" class="error-info erros-login"></span>
                     </div>
                     <div>
-                        <input name="password" id="password" type="password" class="form-control">
+                        <input name="password" id="password" type="password" class="form-control campos-login">
                     </div>
                 </div>
                 <div class=field-column>
@@ -43,11 +43,11 @@ if (! empty($_SESSION['id'])) {
                         ?>
                     </div>
                     <div>
-                        <input type="submit" name="login" value="Login" class="form-control btn btn-primary"></span>
+                        <input type="submit" name="login" value="Login" class="form-control btn btn-primary campos-login botao-login"></span>
                     </div>
                 </div>
-                <div class=field-column>
-                    ou <a href="cadastro-form.php"> Cadastre-se</a> 
+                <div class=field-column >
+                   <p class="nomes-login"> ou <a href="cadastro-form.php" > cadastre-se</a></p> 
                 </div>
             </div>
         </form>

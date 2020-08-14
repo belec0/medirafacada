@@ -303,8 +303,64 @@ input:checked + .slider:before {
 }
 /* Estilização Página de login - MOBILE 400p x 700p */
 
-@media(max-width: 1000px) {
+@media(max-width: 980px) {
   .demo-table {
-    width: 100%;
+    width: 86%;
+    height: 89%;
+    border-radius: 48px;
   }
+  .row {
+    display: block;
+  }
+  .form-head {
+    padding-top: 10%;
+    font-size: 7.8em;
+    margin: 14px;
+    padding-top: 14%;
+    padding-bottom: 7%;
+  }
+  .nomes-login {
+    font-size: 50pt;
+    padding: 16% 0px 4% 0px;
+  }
+  .campos-login {
+    padding: 11%;
+    font-size: 55pt;
+    padding-left: 5%;
+  }
+  .botao-login {
+    font-size: 67pt;
+    text-align-last: center;
+    margin: 0px;
+    padding: 6px;
+    letter-spacing: 19px;
+  }
+  .erros-login {
+    font-size: 35pt;
+    padding: 16% 0px 4% 0px;
+  }
+
+/* Estilização Página de CADASTRO - MOBILE 400p x 700p */ 
+
+.titulo-cadastro {
+  padding-top: 20px;
+  font-size: 70pt;
+  text-align: center;
+}
+.campos-cadastro {
+  padding: 0%;
+  font-size: 55pt;
+  padding-left: 5%;
+}
+.nomes-cadastro {
+  font-size: 50pt;
+  padding: 10% 0px 4% 0px;
+}
+.botao-login {
+  font-size: 67pt;
+  text-align-last: center;
+  margin: 0px;
+  padding: 6px;
+  letter-spacing: 19px;
+}
 }

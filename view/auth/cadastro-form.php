@@ -1,10 +1,10 @@
 <?php require_once("../layout/topTheme.php"); ?>
 
-    <div style="width:30%; margin-left: 35%; margin-top: 5%; ">
+    <div style="">
         <form action="cadastro-action.php" method="post" id="frmLogin" onSubmit="return validate();" >
             <div class="demo-table bg-light">
 
-                <h2>Cadastro</h2>
+                <h2 class="titulo-cadastro">Cadastro</h2>
                 <?php 
                 if(isset($_SESSION["errorMessage"])) {
                 ?>
@@ -15,39 +15,39 @@
                 ?>
                 <div class="field-column">
                     <div>
-                        <label for="email">Email</label><span id="user_info" class="error-info"></span>
+                        <label for="email" class="nomes-cadastro">Email</label><span id="user_info" class="error-info erros-login"></span>
                     </div>
                     <div>
-                        <input name="user_email" id="user_email" type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="field-column">
-                    <div>
-                        <label for="username">Usiário</label><span id="user_info" class="error-info"></span>
-                    </div>
-                    <div>
-                        <input name="user_name" id="user_name" type="text" class="form-control">
+                        <input name="user_email" id="user_email" type="text" class="form-control campos-cadastro">
                     </div>
                 </div>
                 <div class="field-column">
                     <div>
-                        <label for="password">Senha</label><span id="password_info" class="error-info"></span>
+                        <label for="username" class="nomes-cadastro">Usuário</label><span id="user_info" class="error-info erros-login"></span>
                     </div>
                     <div>
-                        <input name="password" id="password" type="password" class="form-control">
+                        <input name="user_name" id="user_name" type="text" class="form-control campos-cadastro">
                     </div>
                 </div>
                 <div class="field-column">
                     <div>
-                        <label for="password_confirm">Confirme sua Senha</label><span id="password_confirm" class="error-info"></span>
+                        <label for="password" class="nomes-cadastro">Senha</label><span id="password_info" class="error-info erros-login"></span>
                     </div>
                     <div>
-                        <input name="password_confirm" id="password_confirm" type="password" class="form-control">
+                        <input name="password" id="password" type="password" class="form-control campos-cadastro">
+                    </div>
+                </div>
+                <div class="field-column">
+                    <div>
+                        <label for="password_confirm" class="nomes-cadastro">Confirme sua Senha</label><span id="password_confirm" class="error-info"></span>
+                    </div>
+                    <div>
+                        <input name="password_confirm" id="password_confirm" type="password" class="form-control campos-cadastro">
                     </div>
                 </div>
                 <div class=field-column>
                     <div>
-                        <input type="submit"  value="Cadastrar" class="form-control btn btn-primary"></span>
+                        <input type="submit"  value="Cadastrar" class="form-control btn btn-primary botao-login"></span>
                     </div>
                 </div>
             </div>
