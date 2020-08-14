@@ -301,9 +301,6 @@ input:checked + .slider:before {
 #form-estilo {
   text-align: -webkit-center;
 }
-#testee {
-  color: red;
-}
 /* Estilização Página de login - MOBILE 400p x 700p */
 
 @media(max-width: 1000px) {
